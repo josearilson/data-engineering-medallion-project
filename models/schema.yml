@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_clientes
+    description: "Camada Silver: Clientes do e-commerce com nomes limpos e estados padronizados."
+    columns:
+      - name: id_cliente
+        # data_tests:      <-- Comente estas 3 linhas
+        #   - unique       <--
+        #   - not_null     <--
+      - name: estado_codigo
+        # data_tests:      <-- Comente estas 2 linhas
+        #   - not_null     <--

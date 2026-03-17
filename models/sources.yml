@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ecom_raw             # Nome amigável para o dbt
+    catalog: workspace        # Seu catálogo no Unity Catalog
+    schema: ecommerce           # O schema onde as tabelas estão no Databricks
+    tables:
+      - name: vendas          # Ref: {{ source('ecom_raw', 'vendas') }}
+      - name: clientes        # Ref: {{ source('ecom_raw', 'clientes') }}
+      - name: produtos        # Ref: {{ source('ecom_raw', 'produtos') }}
